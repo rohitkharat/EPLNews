@@ -122,7 +122,7 @@
     label.font = [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:20];
     label.textAlignment = NSTextAlignmentCenter;
     label.textColor = [UIColor whiteColor];
-    label.text = @"EPL News";
+    label.text = @"EPL News Hub";
     // emboss in the same way as the native title
     [label setShadowColor:[UIColor darkGrayColor]];
     [label setShadowOffset:CGSizeMake(0, -0.5)];

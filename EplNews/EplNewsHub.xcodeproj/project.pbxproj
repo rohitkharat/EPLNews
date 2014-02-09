@@ -50,14 +50,14 @@
 		7110B0F918A5C51E0041CE29 /* BannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BannerViewController.m; sourceTree = "<group>"; };
 		712CE29818A1457F00F95B9B /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
 		712CE29A18A1649F00F95B9B /* list.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = list.png; sourceTree = "<group>"; };
-		71D9ECE3189E33EF0020FB53 /* EplNews.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EplNews.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D9ECE3189E33EF0020FB53 /* EplNewsHub.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EplNewsHub.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D9ECE6189E33EF0020FB53 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		71D9ECE8189E33EF0020FB53 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		71D9ECEA189E33EF0020FB53 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		71D9ECEE189E33EF0020FB53 /* EplNews-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EplNews-Info.plist"; sourceTree = "<group>"; };
+		71D9ECEE189E33EF0020FB53 /* EplNewsHub-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EplNewsHub-Info.plist"; sourceTree = "<group>"; };
 		71D9ECF0189E33EF0020FB53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71D9ECF2189E33EF0020FB53 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		71D9ECF4189E33EF0020FB53 /* EplNews-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EplNews-Prefix.pch"; sourceTree = "<group>"; };
+		71D9ECF4189E33EF0020FB53 /* EplNewsHub-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "EplNewsHub-Prefix.pch"; sourceTree = "<group>"; };
 		71D9ECF5189E33EF0020FB53 /* EPLAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPLAppDelegate.h; sourceTree = "<group>"; };
 		71D9ECF6189E33EF0020FB53 /* EPLAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPLAppDelegate.m; sourceTree = "<group>"; };
 		71D9ECF9189E33EF0020FB53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
@@ -67,9 +67,9 @@
 		71D9ED01189E33EF0020FB53 /* EPLDetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = EPLDetailViewController.h; sourceTree = "<group>"; };
 		71D9ED02189E33EF0020FB53 /* EPLDetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EPLDetailViewController.m; sourceTree = "<group>"; };
 		71D9ED04189E33EF0020FB53 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		71D9ED0A189E33F00020FB53 /* EplNewsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EplNewsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		71D9ED0A189E33F00020FB53 /* EplNewsHubTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = EplNewsHubTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71D9ED0B189E33F00020FB53 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		71D9ED13189E33F00020FB53 /* EplNewsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EplNewsTests-Info.plist"; sourceTree = "<group>"; };
+		71D9ED13189E33F00020FB53 /* EplNewsHubTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "EplNewsHubTests-Info.plist"; sourceTree = "<group>"; };
 		71D9ED15189E33F00020FB53 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		71D9ED17189E33F00020FB53 /* EplNewsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = EplNewsTests.m; sourceTree = "<group>"; };
 		71D9ED68189E6E000020FB53 /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01-refresh.png"; path = "../01-refresh.png"; sourceTree = "<group>"; };
@@ -119,8 +119,8 @@
 		71D9ECE4189E33EF0020FB53 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				71D9ECE3189E33EF0020FB53 /* EplNews.app */,
-				71D9ED0A189E33F00020FB53 /* EplNewsTests.xctest */,
+				71D9ECE3189E33EF0020FB53 /* EplNewsHub.app */,
+				71D9ED0A189E33F00020FB53 /* EplNewsHubTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -167,10 +167,10 @@
 		71D9ECED189E33EF0020FB53 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				71D9ECEE189E33EF0020FB53 /* EplNews-Info.plist */,
+				71D9ECEE189E33EF0020FB53 /* EplNewsHub-Info.plist */,
 				71D9ECEF189E33EF0020FB53 /* InfoPlist.strings */,
 				71D9ECF2189E33EF0020FB53 /* main.m */,
-				71D9ECF4189E33EF0020FB53 /* EplNews-Prefix.pch */,
+				71D9ECF4189E33EF0020FB53 /* EplNewsHub-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -187,7 +187,7 @@
 		71D9ED12189E33F00020FB53 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				71D9ED13189E33F00020FB53 /* EplNewsTests-Info.plist */,
+				71D9ED13189E33F00020FB53 /* EplNewsHubTests-Info.plist */,
 				71D9ED14189E33F00020FB53 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -196,9 +196,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		71D9ECE2189E33EF0020FB53 /* EplNews */ = {
+		71D9ECE2189E33EF0020FB53 /* EplNewsHub */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71D9ED1B189E33F00020FB53 /* Build configuration list for PBXNativeTarget "EplNews" */;
+			buildConfigurationList = 71D9ED1B189E33F00020FB53 /* Build configuration list for PBXNativeTarget "EplNewsHub" */;
 			buildPhases = (
 				71D9ECDF189E33EF0020FB53 /* Sources */,
 				71D9ECE0189E33EF0020FB53 /* Frameworks */,
@@ -208,14 +208,14 @@
 			);
 			dependencies = (
 			);
-			name = EplNews;
+			name = EplNewsHub;
 			productName = EplNews;
-			productReference = 71D9ECE3189E33EF0020FB53 /* EplNews.app */;
+			productReference = 71D9ECE3189E33EF0020FB53 /* EplNewsHub.app */;
 			productType = "com.apple.product-type.application";
 		};
-		71D9ED09189E33F00020FB53 /* EplNewsTests */ = {
+		71D9ED09189E33F00020FB53 /* EplNewsHubTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 71D9ED1E189E33F00020FB53 /* Build configuration list for PBXNativeTarget "EplNewsTests" */;
+			buildConfigurationList = 71D9ED1E189E33F00020FB53 /* Build configuration list for PBXNativeTarget "EplNewsHubTests" */;
 			buildPhases = (
 				71D9ED06189E33F00020FB53 /* Sources */,
 				71D9ED07189E33F00020FB53 /* Frameworks */,
@@ -226,9 +226,9 @@
 			dependencies = (
 				71D9ED10189E33F00020FB53 /* PBXTargetDependency */,
 			);
-			name = EplNewsTests;
+			name = EplNewsHubTests;
 			productName = EplNewsTests;
-			productReference = 71D9ED0A189E33F00020FB53 /* EplNewsTests.xctest */;
+			productReference = 71D9ED0A189E33F00020FB53 /* EplNewsHubTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -246,7 +246,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 71D9ECDE189E33EE0020FB53 /* Build configuration list for PBXProject "EplNews" */;
+			buildConfigurationList = 71D9ECDE189E33EE0020FB53 /* Build configuration list for PBXProject "EplNewsHub" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -259,8 +259,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				71D9ECE2189E33EF0020FB53 /* EplNews */,
-				71D9ED09189E33F00020FB53 /* EplNewsTests */,
+				71D9ECE2189E33EF0020FB53 /* EplNewsHub */,
+				71D9ED09189E33F00020FB53 /* EplNewsHubTests */,
 			);
 		};
 /* End PBXProject section */
@@ -321,7 +321,7 @@
 /* Begin PBXTargetDependency section */
 		71D9ED10189E33F00020FB53 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 71D9ECE2189E33EF0020FB53 /* EplNews */;
+			target = 71D9ECE2189E33EF0020FB53 /* EplNewsHub */;
 			targetProxy = 71D9ED0F189E33F00020FB53 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -442,9 +442,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EplNews/EplNews-Prefix.pch";
-				INFOPLIST_FILE = "EplNews/EplNews-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "EplNews/EplNewsHub-Prefix.pch";
+				INFOPLIST_FILE = "EplNews/EplNewsHub-Info.plist";
+				PRODUCT_NAME = EplNewsHub;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -455,9 +455,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "EplNews/EplNews-Prefix.pch";
-				INFOPLIST_FILE = "EplNews/EplNews-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "EplNews/EplNewsHub-Prefix.pch";
+				INFOPLIST_FILE = "EplNews/EplNewsHub-Info.plist";
+				PRODUCT_NAME = EplNewsHub;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -478,8 +478,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "EplNewsTests/EplNewsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "EplNewsTests/EplNewsHubTests-Info.plist";
+				PRODUCT_NAME = EplNewsHubTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -497,8 +497,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EplNews/EplNews-Prefix.pch";
-				INFOPLIST_FILE = "EplNewsTests/EplNewsTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "EplNewsTests/EplNewsHubTests-Info.plist";
+				PRODUCT_NAME = EplNewsHubTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -507,7 +507,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71D9ECDE189E33EE0020FB53 /* Build configuration list for PBXProject "EplNews" */ = {
+		71D9ECDE189E33EE0020FB53 /* Build configuration list for PBXProject "EplNewsHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D9ED19189E33F00020FB53 /* Debug */,
@@ -516,7 +516,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71D9ED1B189E33F00020FB53 /* Build configuration list for PBXNativeTarget "EplNews" */ = {
+		71D9ED1B189E33F00020FB53 /* Build configuration list for PBXNativeTarget "EplNewsHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D9ED1C189E33F00020FB53 /* Debug */,
@@ -525,7 +525,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		71D9ED1E189E33F00020FB53 /* Build configuration list for PBXNativeTarget "EplNewsTests" */ = {
+		71D9ED1E189E33F00020FB53 /* Build configuration list for PBXNativeTarget "EplNewsHubTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D9ED1F189E33F00020FB53 /* Debug */,

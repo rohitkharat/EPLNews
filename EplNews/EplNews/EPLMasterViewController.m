@@ -48,7 +48,6 @@
                  @"Bleacher Report",
                  @"The Telegraph",
                  @"Football365",
-                 @"fail",
                  nil];
     
     siteAddress = [[NSArray alloc]
@@ -60,7 +59,6 @@
                    @"http://bleacherreport.com/epl",
                    @"http://www.telegraph.co.uk/sport/football/",
                    @"http://www.football365.com/premier-league",
-                   @"fail",
                    nil];
 
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
@@ -108,7 +106,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 
-    self.navigationController.navigationBar.topItem.title = @"EPL News";
+    self.navigationController.navigationBar.topItem.title = @"EPL News Hub";
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad && [[UIDevice currentDevice] orientation] == UIDeviceOrientationPortrait) {
         NSLog(@"portrait ipad");
         self.tableView.backgroundView.alpha = 0.5;

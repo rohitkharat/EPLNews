@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "71D9ECE2189E33EF0020FB53"
                BuildableName = "EplNews.app"
-               BlueprintName = "EplNews"
-               ReferencedContainer = "container:EplNews.xcodeproj">
+               BlueprintName = "EplNewsHub"
+               ReferencedContainer = "container:EplNewsHub.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "71D9ED09189E33F00020FB53"
                BuildableName = "EplNewsTests.xctest"
-               BlueprintName = "EplNewsTests"
-               ReferencedContainer = "container:EplNews.xcodeproj">
+               BlueprintName = "EplNewsHubTests"
+               ReferencedContainer = "container:EplNewsHub.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71D9ECE2189E33EF0020FB53"
             BuildableName = "EplNews.app"
-            BlueprintName = "EplNews"
-            ReferencedContainer = "container:EplNews.xcodeproj">
+            BlueprintName = "EplNewsHub"
+            ReferencedContainer = "container:EplNewsHub.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71D9ECE2189E33EF0020FB53"
             BuildableName = "EplNews.app"
-            BlueprintName = "EplNews"
-            ReferencedContainer = "container:EplNews.xcodeproj">
+            BlueprintName = "EplNewsHub"
+            ReferencedContainer = "container:EplNewsHub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71D9ECE2189E33EF0020FB53"
             BuildableName = "EplNews.app"
-            BlueprintName = "EplNews"
-            ReferencedContainer = "container:EplNews.xcodeproj">
+            BlueprintName = "EplNewsHub"
+            ReferencedContainer = "container:EplNewsHub.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
