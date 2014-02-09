@@ -8,16 +8,25 @@
 
 #import "EPLDetailViewController.h"
 #import <iAd/iAd.h>
+#import "BannerViewController.h"
+
 
 @interface EPLDetailViewController ()
 @property (strong, nonatomic) UIPopoverController *masterPopoverController;
+@property (nonatomic, strong) IBOutlet NSLayoutConstraint *bottomConstraint;
+
 - (void)configureView;
 @end
 
 @implementation EPLDetailViewController
-
+{
+    ADBannerView *_bannerView;
+}
 //@synthesize webView2;
 @synthesize urlString;
+@synthesize webView;
+
+
 
 #pragma mark - Managing the detail item
 
@@ -64,13 +73,14 @@
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         self.webView.scalesPageToFit = YES;
         [self.webView loadRequest:request];
+        
     }
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:self.refreshButton, self.backButton, nil];
     self.navigationController.toolbarHidden = YES;
     
@@ -126,9 +136,26 @@
         //ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
         //adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
         //[self.view addSubview:adView];
+        // On iOS 6 ADBannerView introduces a new initializer, use it when available.
+        if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
+            _bannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+        } else {
+            _bannerView = [[ADBannerView alloc] init];
+        }
+        _bannerView.delegate = self;
+        [self.view addSubview:_bannerView];
         
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:)name:UIDeviceOrientationDidChangeNotification object:nil];
+}
+    
+
 }
 
+
+-(void)didRotate:(NSNotification *)notification
+{
+    NSLog(@"did Rotate");
+    
 }
 
 -(void)back
@@ -212,17 +239,100 @@
     [self.webView goBack];
 }
 
--(void)bannerViewDidLoadAd:(ADBannerView *)banner
+- (void)layoutAnimated:(BOOL)animated
 {
-    [self.view addSubview:banner];
-    [self.view layoutIfNeeded];
+    CGRect contentFrame = self.view.bounds;
+    
+    // all we need to do is ask the banner for a size that fits into the layout area we are using
+    CGSize sizeForBanner = [_bannerView sizeThatFits:contentFrame.size];
+    
+    // compute the ad banner frame
+    CGRect bannerFrame = _bannerView.frame;
+    if (_bannerView.bannerLoaded) {
+        
+        // bring the ad into view
+        contentFrame.size.height -= sizeForBanner.height;   // shrink down content frame to fit the banner below it
+        bannerFrame.origin.y = contentFrame.size.height;
+        bannerFrame.size.height = sizeForBanner.height;
+        bannerFrame.size.width = sizeForBanner.width;
+        
+        // if the ad is available and loaded, shrink down the content frame to fit the banner below it,
+        // we do this by modifying the vertical bottom constraint constant to equal the banner's height
+        //
+        NSLayoutConstraint *verticalBottomConstraint = self.bottomConstraint;
+        verticalBottomConstraint.constant = sizeForBanner.height;
+        [self.view layoutSubviews];
+        
+    } else {
+        // hide the banner off screen further off the bottom
+        bannerFrame.origin.y = contentFrame.size.height;
+    }
+    
+    [UIView animateWithDuration:animated ? 0.25 : 0.0 animations:^{
+        self.webView.frame = contentFrame;
+        [self.webView layoutIfNeeded];
+        _bannerView.frame = bannerFrame;
+    }];
 }
 
--(void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+- (void)viewDidAppear:(BOOL)animated
 {
-    NSLog(@"error: %@", error);
-    [banner removeFromSuperview];
-    [self.view layoutIfNeeded];
+    [super viewDidAppear:animated];
+    [self layoutAnimated:NO];
+}
+
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+}
+
+#if __IPHONE_OS_VERSION_MIN_REQUIRED < __IPHONE_6_0
+- (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation
+{
+    return YES;
+}
+#endif
+
+- (NSUInteger)supportedInterfaceOrientations
+{
+    return UIInterfaceOrientationMaskAll;
+}
+
+- (void)viewDidLayoutSubviews
+{
+    [self layoutAnimated:[UIView areAnimationsEnabled]];
+    NSLog(@"viewDidLayoutSubviews");
+    
+}
+
+- (void)bannerViewDidLoadAd:(ADBannerView *)banner
+{
+    NSLog(@"bannerViewDidLoadAd");
+    
+    [self layoutAnimated:YES];
+}
+
+- (void)bannerView:(ADBannerView *)banner didFailToReceiveAdWithError:(NSError *)error
+{
+    NSLog(@"didFailToReceiveAdWithError %@", error);
+    [self layoutAnimated:YES];
+}
+
+- (BOOL)bannerViewActionShouldBegin:(ADBannerView *)banner willLeaveApplication:(BOOL)willLeave
+{
+    NSLog(@"bannerViewActionShouldBegin");
+    
+    return YES;
+}
+
+- (void)bannerViewActionDidFinish:(ADBannerView *)banner
+{
+    NSLog(@"bannerViewActionDidFinish");
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 

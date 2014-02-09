@@ -68,6 +68,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="iA9-UF-u7B" id="SUz-pq-c5x"/>
+                        <outlet property="bottomConstraint" destination="nCW-of-51V" id="bic-9P-8Pj"/>
                         <outlet property="refreshButton" destination="chV-Xq-zm2" id="5FC-Y8-g0a"/>
                         <outlet property="webView" destination="IoT-TU-n8f" id="Ufo-AQ-r26"/>
                     </connections>

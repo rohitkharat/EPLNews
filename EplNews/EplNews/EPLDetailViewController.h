@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import <iAd/iAd.h>
 
-@interface EPLDetailViewController : UIViewController <UISplitViewControllerDelegate, UIWebViewDelegate>
+@interface EPLDetailViewController : UIViewController <UISplitViewControllerDelegate, UIWebViewDelegate,ADBannerViewDelegate>
 
 @property (strong, nonatomic) NSString *urlString;
 @property (strong, nonatomic) IBOutlet UIWebView *webView;
@@ -19,6 +19,7 @@
 
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+//@property (strong, nonatomic) IBOutlet ADBannerView *adView;
 
 -(IBAction)reloadPage:(id)sender;
 -(IBAction)previousPage:(id)sender;

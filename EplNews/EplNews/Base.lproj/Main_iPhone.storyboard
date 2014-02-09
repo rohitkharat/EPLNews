@@ -111,6 +111,7 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="backButton" destination="1Ir-vB-iSx" id="HPy-9Y-cgg"/>
+                        <outlet property="bottomConstraint" destination="ayx-Fs-rlN" id="chS-LN-SBh"/>
                         <outlet property="refreshButton" destination="Mlu-9k-rWF" id="50w-AZ-CTY"/>
                         <outlet property="webView" destination="Zek-WQ-0ju" id="0pm-ei-lrB"/>
                     </connections>

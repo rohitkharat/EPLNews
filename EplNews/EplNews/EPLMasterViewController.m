@@ -48,6 +48,7 @@
                  @"Bleacher Report",
                  @"The Telegraph",
                  @"Football365",
+                 @"fail",
                  nil];
     
     siteAddress = [[NSArray alloc]
@@ -59,6 +60,7 @@
                    @"http://bleacherreport.com/epl",
                    @"http://www.telegraph.co.uk/sport/football/",
                    @"http://www.football365.com/premier-league",
+                   @"fail",
                    nil];
 
 //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
@@ -185,12 +187,13 @@
 //    }
 //}
 
-/*
+
 // Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
+//- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
+//{
+//    
+//}
+
 
 
 // Override to support conditional rearranging of the table view.
@@ -221,7 +224,7 @@
         NSLog(@"site selected = %@", [siteNames objectAtIndex:indexPath.row]);
         
         self.url = [NSURL URLWithString:self.urlString];
-        NSURLRequest *request = [NSURLRequest requestWithURL:url];
+        NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
         self.detailViewController.webView.scalesPageToFit = YES;
         [self.detailViewController.webView loadRequest:request];
     }
