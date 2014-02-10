@@ -30,22 +30,6 @@
 
 #pragma mark - Managing the detail item
 
-//- (void)setUrl:(NSURL *)urlOfPage
-//{
-//    NSLog(@"set url");
-//    if (self.url != urlOfPage) {
-//        NSLog(@"inside if");
-//        self.url = urlOfPage;
-//        
-//        // Update the view.
-//        [self configureView];
-//    }
-//
-//    if (self.masterPopoverController != nil) {
-//        [self.masterPopoverController dismissPopoverAnimated:YES];
-//    }        
-//}
-
 - (void)setDetailItem:(id)newDetailItem
 {
     if (_detailItem != newDetailItem) {
@@ -66,9 +50,9 @@
     // Update the user interface for the detail item.
 
     if (self.detailItem) {
-        NSLog(@"configuring view");
+       // NSLog(@"configuring view");
         self.urlString = [self.detailItem description];
-        NSLog(@"url string %@", self.urlString);
+       // NSLog(@"url string %@", self.urlString);
         NSURL *url = [NSURL URLWithString:self.urlString];
         NSURLRequest *request = [NSURLRequest requestWithURL:url];
         self.webView.scalesPageToFit = YES;
@@ -81,12 +65,10 @@
 {
     [super viewDidLoad];
     
-    
-    
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:self.refreshButton, self.backButton, nil];
     self.navigationController.toolbarHidden = YES;
     
-//-------------------------
+    //-------------------------
     //iAds
     self.canDisplayBannerAds = YES;
     if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
@@ -98,7 +80,7 @@
     [self.view addSubview:_bannerView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:)name:UIDeviceOrientationDidChangeNotification object:nil];
-//--------------------------
+    //--------------------------
     
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
@@ -112,45 +94,44 @@
     self.navigationController.navigationBar.topItem.title = @"";
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
-
-    UIImage *backButtonImage = [UIImage imageNamed:@"list.png"];
-    UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc]init];
-    barButtonItem.image = backButtonImage;
-    self.navigationItem.backBarButtonItem.image = backButtonImage;
-   // barButtonItem.image = backButtonImage;
-    
+        
+        UIImage *backButtonImage = [UIImage imageNamed:@"list.png"];
+        UIBarButtonItem *barButtonItem = [[UIBarButtonItem alloc]init];
+        barButtonItem.image = backButtonImage;
+        self.navigationItem.backBarButtonItem.image = backButtonImage;
+        // barButtonItem.image = backButtonImage;
+        
         UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
                                        initWithImage:backButtonImage
                                        style:UIBarButtonItemStylePlain
                                        target:self
                                        action:@selector(back)];
-    
-    
-    self.navigationItem.backBarButtonItem = backButton;
-    
-      [self.navigationItem setLeftBarButtonItem:backButton animated:YES];
+        
+        
+        self.navigationItem.backBarButtonItem = backButton;
+        
+        [self.navigationItem setLeftBarButtonItem:backButton animated:YES];
     }
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
-    
-    CGRect frame = CGRectMake(0, 0, 400, 44);
-    UILabel *label = [[UILabel alloc] initWithFrame:frame];
-    label.backgroundColor = [UIColor clearColor];
-    label.font = [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:20];
-    label.textAlignment = NSTextAlignmentCenter;
-    label.textColor = [UIColor whiteColor];
-    label.text = @"EPL News Hub";
-    // emboss in the same way as the native title
-    [label setShadowColor:[UIColor darkGrayColor]];
-    [label setShadowOffset:CGSizeMake(0, -0.5)];
-    self.navigationItem.titleView = label;
-
-    
-    self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:0.57 saturation:0.9 brightness:0.57 alpha:1];
         
-       }
+        CGRect frame = CGRectMake(0, 0, 400, 44);
+        UILabel *label = [[UILabel alloc] initWithFrame:frame];
+        label.backgroundColor = [UIColor clearColor];
+        label.font = [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:20];
+        label.textAlignment = NSTextAlignmentCenter;
+        label.textColor = [UIColor whiteColor];
+        label.text = @"EPL News Hub";
+        [label setShadowColor:[UIColor darkGrayColor]];
+        [label setShadowOffset:CGSizeMake(0, -0.5)];
+        self.navigationItem.titleView = label;
+        
+        
+        self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:0.57 saturation:0.9 brightness:0.57 alpha:1];
+        
+    }
     
-
+    
 }
 
 
@@ -162,49 +143,22 @@
 
 -(void)back
 {
-    NSLog(@"back");
     [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Split view
 
 - (void)splitViewController:(UISplitViewController *)splitController willHideViewController:(UIViewController *)viewController withBarButtonItem:(UIBarButtonItem *)barButtonItem forPopoverController:(UIPopoverController *)popoverController
 {
-   // barButtonItem.title = NSLocalizedString(@"Source", @"Source");
-    
-    
-//    CGRect frame = CGRectMake(0, 0, 100, 44);
-//    UILabel *label = [[UILabel alloc] initWithFrame:frame];
-//    label.backgroundColor = [UIColor clearColor];
-//    label.font = [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:20];
-//    label.textAlignment = NSTextAlignmentCenter;
-//    label.textColor = [UIColor whiteColor];
-//    label.text = @"Source";
-//    // emboss in the same way as the native title
-//    [label setShadowColor:[UIColor darkGrayColor]];
-//    [label setShadowOffset:CGSizeMake(0, -0.5)];
-//    
-//    
-//    [barButtonItem setCustomView:label];
 
     UIImage *backButtonImage = [UIImage imageNamed:@"list.png"];
     
     barButtonItem.image = backButtonImage;
-    
-//    UIBarButtonItem *backButton = [[UIBarButtonItem alloc]
-//                                   initWithImage:backButtonImage
-//                                   style:UIBarButtonItemStylePlain
-//                                   target:nil
-//                                   action:nil];
-    
-    
-    //self.navigationItem.backBarButtonItem = backButton;
     
     [self.navigationItem setLeftBarButtonItem:barButtonItem animated:YES];
 
@@ -221,7 +175,7 @@
 - (void)webViewDidStartLoad:(UIWebView *)webView
 {
 	// starting the load, show the activity indicator in the status bar
-    NSLog(@"did start load page");
+   // NSLog(@"did start load page");
 	[UIApplication sharedApplication].networkActivityIndicatorVisible = YES;
 }
 

@@ -37,7 +37,7 @@
     [super viewDidLoad];
     visitedSites = [[NSMutableArray alloc]init];
 	// Do any additional setup after loading the view, typically from a nib.
-//    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    //    self.navigationItem.leftBarButtonItem = self.editButtonItem;
     
     siteNames = [[NSArray alloc] initWithObjects:@"Premier League",
                  @"BBC Sport",
@@ -51,7 +51,7 @@
                  nil];
     
     siteAddress = [[NSArray alloc]
-                      initWithObjects:@"http://www.premierleague.com/en-gb/news.html",
+                   initWithObjects:@"http://www.premierleague.com/en-gb/news.html",
                    @"http://www.bbc.com/sport/0/football/premier-league/",
                    @"http://www.goal.com/en/news/9/england", @"http://msn.foxsports.com/foxsoccer/premierleague",
                    @"http://www1.skysports.com/football/competitions/premier-league",
@@ -60,30 +60,30 @@
                    @"http://www.telegraph.co.uk/sport/football/",
                    @"http://www.football365.com/premier-league",
                    nil];
-
-//    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
-//    self.navigationItem.rightBarButtonItem = addButton;
+    
+    //    UIBarButtonItem *addButton = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(insertNewObject:)];
+    //    self.navigationItem.rightBarButtonItem = addButton;
     self.detailViewController = (EPLDetailViewController *)[[self.splitViewController.viewControllers lastObject] topViewController];
     self.tableView.backgroundColor = [UIColor whiteColor];
     self.tableView.opaque = NO;
     //self.tableView.backgroundView = [[UIImageView alloc]initWithImage:[UIImage imageNamed:@"blue-gradient.png"]];
-  
+    
     if (([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) && [[UIDevice currentDevice] orientation] == UIDeviceOrientationPortrait) {
         self.tableView.backgroundView.alpha = 0.5;
     }
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:0.57 saturation:0.9 brightness:0.57 alpha:1];
     self.detailViewController.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:0.57 saturation:0.9 brightness:0.57 alpha:1];
-
+    
     
     
     self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
     self.detailViewController.navigationController.navigationBar.tintColor = [UIColor whiteColor];
-
+    
     self.detailViewController.navigationController.navigationBar.barTintColor = [UIColor whiteColor];
     self.navigationItem.backBarButtonItem.tintColor = [UIColor whiteColor];
-   // self.navigationItem.backBarButtonItem.title = @"SOURCE";
-
+    // self.navigationItem.backBarButtonItem.title = @"SOURCE";
+    
     [[[self navigationController] navigationBar] setTitleTextAttributes:@{NSForegroundColorAttributeName: [UIColor whiteColor]}];
     
     CGRect frame = CGRectMake(0, 0, 400, 44);
@@ -97,10 +97,10 @@
     [label setShadowColor:[UIColor darkGrayColor]];
     [label setShadowOffset:CGSizeMake(0, -0.5)];
     self.navigationItem.titleView = label;
-
+    
     //self.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
     //self.detailViewController.navigationController.navigationBar.barStyle = UIBarStyleBlackOpaque;
-
+    
 }
 
 - (void)viewWillAppear:(BOOL)animated
@@ -108,7 +108,7 @@
 
     self.navigationController.navigationBar.topItem.title = @"EPL News Hub";
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad && [[UIDevice currentDevice] orientation] == UIDeviceOrientationPortrait) {
-        NSLog(@"portrait ipad");
+        //NSLog(@"portrait ipad");
         self.tableView.backgroundView.alpha = 0.5;
     }
 }
@@ -116,18 +116,8 @@
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
 }
 
-//- (void)insertNewObject:(id)sender
-//{
-//    if (!_objects) {
-//        _objects = [[NSMutableArray alloc] init];
-//    }
-//    [_objects insertObject:[NSDate date] atIndex:0];
-//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-//    [self.tableView insertRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-//}
 
 #pragma mark - Table View
 
@@ -219,7 +209,7 @@
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.urlString = [siteAddress objectAtIndex:indexPath.row];
-        NSLog(@"site selected = %@", [siteNames objectAtIndex:indexPath.row]);
+        //NSLog(@"site selected = %@", [siteNames objectAtIndex:indexPath.row]);
         
         self.url = [NSURL URLWithString:self.urlString];
         NSURLRequest *request = [NSURLRequest requestWithURL:self.url];
