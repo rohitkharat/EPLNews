@@ -29,10 +29,6 @@
 		71D9ED69189E6E000020FB53 /* 01-refresh.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D9ED68189E6E000020FB53 /* 01-refresh.png */; };
 		71D9ED6B189E7BF40020FB53 /* arrow-big-01.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D9ED6A189E7BF40020FB53 /* arrow-big-01.png */; };
 		71D9ED6D189E7C1C0020FB53 /* arrow-small-09.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D9ED6C189E7C1C0020FB53 /* arrow-small-09.png */; };
-		71D9ED6F189E892F0020FB53 /* blue.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71D9ED6E189E892F0020FB53 /* blue.jpg */; };
-		71D9ED71189E94E60020FB53 /* design.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71D9ED70189E94E60020FB53 /* design.jpg */; };
-		71D9ED73189E95F70020FB53 /* epl_football.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 71D9ED72189E95F70020FB53 /* epl_football.jpg */; };
-		71D9ED75189E96690020FB53 /* blue-gradient.png in Resources */ = {isa = PBXBuildFile; fileRef = 71D9ED74189E96690020FB53 /* blue-gradient.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,10 +71,6 @@
 		71D9ED68189E6E000020FB53 /* 01-refresh.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "01-refresh.png"; path = "../01-refresh.png"; sourceTree = "<group>"; };
 		71D9ED6A189E7BF40020FB53 /* arrow-big-01.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-big-01.png"; sourceTree = "<group>"; };
 		71D9ED6C189E7C1C0020FB53 /* arrow-small-09.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "arrow-small-09.png"; sourceTree = "<group>"; };
-		71D9ED6E189E892F0020FB53 /* blue.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = blue.jpg; sourceTree = "<group>"; };
-		71D9ED70189E94E60020FB53 /* design.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = design.jpg; sourceTree = "<group>"; };
-		71D9ED72189E95F70020FB53 /* epl_football.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = epl_football.jpg; sourceTree = "<group>"; };
-		71D9ED74189E96690020FB53 /* blue-gradient.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "blue-gradient.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,10 +143,6 @@
 				7110B0F818A5C51E0041CE29 /* BannerViewController.h */,
 				7110B0F918A5C51E0041CE29 /* BannerViewController.m */,
 				712CE29A18A1649F00F95B9B /* list.png */,
-				71D9ED72189E95F70020FB53 /* epl_football.jpg */,
-				71D9ED74189E96690020FB53 /* blue-gradient.png */,
-				71D9ED70189E94E60020FB53 /* design.jpg */,
-				71D9ED6E189E892F0020FB53 /* blue.jpg */,
 				71D9ED6C189E7C1C0020FB53 /* arrow-small-09.png */,
 				71D9ED6A189E7BF40020FB53 /* arrow-big-01.png */,
 				71D9ED68189E6E000020FB53 /* 01-refresh.png */,
@@ -249,7 +237,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 71D9ECDE189E33EE0020FB53 /* Build configuration list for PBXProject "EplNewsHub" */;
+			buildConfigurationList = 71D9ECDE189E33EE0020FB53 /* Build configuration list for PBXProject "EPL NewsHub" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -273,16 +261,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71D9ED73189E95F70020FB53 /* epl_football.jpg in Resources */,
 				71D9ECFD189E33EF0020FB53 /* Main_iPad.storyboard in Resources */,
-				71D9ED71189E94E60020FB53 /* design.jpg in Resources */,
-				71D9ED6F189E892F0020FB53 /* blue.jpg in Resources */,
 				71D9ED05189E33EF0020FB53 /* Images.xcassets in Resources */,
 				71D9ECFA189E33EF0020FB53 /* Main_iPhone.storyboard in Resources */,
 				712CE29B18A1649F00F95B9B /* list.png in Resources */,
 				71D9ED6D189E7C1C0020FB53 /* arrow-small-09.png in Resources */,
 				71D9ED6B189E7BF40020FB53 /* arrow-big-01.png in Resources */,
-				71D9ED75189E96690020FB53 /* blue-gradient.png in Resources */,
 				71D9ECF1189E33EF0020FB53 /* InfoPlist.strings in Resources */,
 				71D9ED69189E6E000020FB53 /* 01-refresh.png in Resources */,
 			);
@@ -382,8 +366,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rohit Kharat (78B6SN5YK9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rohit Kharat (78B6SN5YK9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rohit Kharat (MZH3SMCMJX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rohit Kharat (MZH3SMCMJX)";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -423,8 +407,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer: Rohit Kharat (78B6SN5YK9)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Rohit Kharat (78B6SN5YK9)";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rohit Kharat (MZH3SMCMJX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rohit Kharat (MZH3SMCMJX)";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -446,13 +430,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rohit Kharat (MZH3SMCMJX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rohit Kharat (MZH3SMCMJX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EplNews/EplNewsHub-Prefix.pch";
 				INFOPLIST_FILE = "EplNews/EplNewsHub-Info.plist";
 				PRODUCT_NAME = EplNewsHub;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "B679FC2F-B31F-43CD-A6A3-9420CB2A4EAD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -462,13 +446,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Distribution: Rohit Kharat (MZH3SMCMJX)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Rohit Kharat (MZH3SMCMJX)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "EplNews/EplNewsHub-Prefix.pch";
 				INFOPLIST_FILE = "EplNews/EplNewsHub-Info.plist";
 				PRODUCT_NAME = EplNewsHub;
-				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE = "B679FC2F-B31F-43CD-A6A3-9420CB2A4EAD";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -518,7 +502,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		71D9ECDE189E33EE0020FB53 /* Build configuration list for PBXProject "EplNewsHub" */ = {
+		71D9ECDE189E33EE0020FB53 /* Build configuration list for PBXProject "EPL NewsHub" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				71D9ED19189E33F00020FB53 /* Debug */,

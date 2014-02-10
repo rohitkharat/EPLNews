@@ -121,7 +121,7 @@
         label.font = [UIFont fontWithName:@"AvenirNextCondensed-Medium" size:20];
         label.textAlignment = NSTextAlignmentCenter;
         label.textColor = [UIColor whiteColor];
-        label.text = @"EPL News Hub";
+        label.text = @"EPL NewsHub";
         [label setShadowColor:[UIColor darkGrayColor]];
         [label setShadowOffset:CGSizeMake(0, -0.5)];
         self.navigationItem.titleView = label;
@@ -290,7 +290,5 @@
 {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-
-
 
 @end

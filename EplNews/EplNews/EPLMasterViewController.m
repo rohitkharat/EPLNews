@@ -106,7 +106,7 @@
 - (void)viewWillAppear:(BOOL)animated
 {
 
-    self.navigationController.navigationBar.topItem.title = @"EPL News Hub";
+    self.navigationController.navigationBar.topItem.title = @"EPL NewsHub";
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad && [[UIDevice currentDevice] orientation] == UIDeviceOrientationPortrait) {
         //NSLog(@"portrait ipad");
         self.tableView.backgroundView.alpha = 0.5;
