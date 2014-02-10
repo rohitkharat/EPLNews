@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "71D9ECE2189E33EF0020FB53"
-               BuildableName = "EplNews.app"
+               BuildableName = "EplNewsHub.app"
                BlueprintName = "EplNewsHub"
                ReferencedContainer = "container:EplNewsHub.xcodeproj">
             </BuildableReference>
@@ -33,7 +33,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "71D9ED09189E33F00020FB53"
-               BuildableName = "EplNewsTests.xctest"
+               BuildableName = "EplNewsHubTests.xctest"
                BlueprintName = "EplNewsHubTests"
                ReferencedContainer = "container:EplNewsHub.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71D9ECE2189E33EF0020FB53"
-            BuildableName = "EplNews.app"
+            BuildableName = "EplNewsHub.app"
             BlueprintName = "EplNewsHub"
             ReferencedContainer = "container:EplNewsHub.xcodeproj">
          </BuildableReference>
@@ -62,7 +62,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71D9ECE2189E33EF0020FB53"
-            BuildableName = "EplNews.app"
+            BuildableName = "EplNewsHub.app"
             BlueprintName = "EplNewsHub"
             ReferencedContainer = "container:EplNewsHub.xcodeproj">
          </BuildableReference>
@@ -80,7 +80,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "71D9ECE2189E33EF0020FB53"
-            BuildableName = "EplNews.app"
+            BuildableName = "EplNewsHub.app"
             BlueprintName = "EplNewsHub"
             ReferencedContainer = "container:EplNewsHub.xcodeproj">
          </BuildableReference>

@@ -81,8 +81,25 @@
 {
     [super viewDidLoad];
     
+    
+    
     self.navigationItem.rightBarButtonItems = [[NSArray alloc] initWithObjects:self.refreshButton, self.backButton, nil];
     self.navigationController.toolbarHidden = YES;
+    
+//-------------------------
+    //iAds
+    self.canDisplayBannerAds = YES;
+    if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
+        _bannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
+    } else {
+        _bannerView = [[ADBannerView alloc] init];
+    }
+    _bannerView.delegate = self;
+    [self.view addSubview:_bannerView];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:)name:UIDeviceOrientationDidChangeNotification object:nil];
+//--------------------------
+    
     
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPad) {
         self.urlString = @"http://www.premierleague.com/";
@@ -131,22 +148,7 @@
     
     self.navigationController.navigationBar.barTintColor = [UIColor colorWithHue:0.57 saturation:0.9 brightness:0.57 alpha:1];
         
-        //iAds
-        self.canDisplayBannerAds = YES;
-        //ADBannerView *adView = [[ADBannerView alloc] initWithFrame:CGRectZero];
-        //adView.currentContentSizeIdentifier = ADBannerContentSizeIdentifierPortrait;
-        //[self.view addSubview:adView];
-        // On iOS 6 ADBannerView introduces a new initializer, use it when available.
-        if ([ADBannerView instancesRespondToSelector:@selector(initWithAdType:)]) {
-            _bannerView = [[ADBannerView alloc] initWithAdType:ADAdTypeBanner];
-        } else {
-            _bannerView = [[ADBannerView alloc] init];
-        }
-        _bannerView.delegate = self;
-        [self.view addSubview:_bannerView];
-        
-        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(didRotate:)name:UIDeviceOrientationDidChangeNotification object:nil];
-}
+       }
     
 
 }
